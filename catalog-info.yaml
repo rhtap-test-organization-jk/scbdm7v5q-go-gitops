@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: scbdm7v5q-go-gitops
+  description: This is GitOps manifest for scbdm7v5q-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: scbdm7v5q-go
+    janus-idp.io/tekton: scbdm7v5q-go
+    backstage.io/kubernetes-id: scbdm7v5q-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:scbdm7v5q-go
